@@ -6,6 +6,6 @@
 
 window.addEventListener('keydown', function(e) {
   const audio = document.querySelector(`audio[data-keyId="${e.keyCode}"]`) // grabbed audio tag that is keydown
-  console.log(audio);
+  audio.currentTime = 0; // resets time so we can repeatedly press key with no delay
   audio.play()
 })
